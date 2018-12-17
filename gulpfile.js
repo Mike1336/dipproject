@@ -11,17 +11,17 @@ gulp.task('compiletocss', function(){
       .pipe(gulp.dest('styles/css/'))
   });
 
-gulp.task('concatcss', function(){
+gulp.task('concatcss', function(){ //Объединение (конкатинация) нескольких CSS-файлов в один
   return gulp.src('styles/css/*.css')
     .pipe(concatCSS('join.css'))
     .pipe(gulp.dest('styles/concatenateCSS/'))
 });
 
-gulp.task('minifycss', function(){
+gulp.task('minifycss', function(){  //Минификация CSS-файлов
     return gulp.src('styles/concatenateCSS/join.css')
       .pipe(minifyCSS())
 
-      .pipe(rename({
+      .pipe(rename({ //переименование минифицированного файла (добавление ".min" в название)
         dirname: "minCSS/",
         basename: "join",
         suffix: ".min",
@@ -31,7 +31,7 @@ gulp.task('minifycss', function(){
       .pipe(gulp.dest('styles/'))
   });
 
-  gulp.task('prefixcss', function(){
+  gulp.task('prefixcss', function(){ // добавление префиксов для разных браузеров в CSS-файлы
     return gulp.src('styles/css/*.css')
 
       .pipe(autoprefixer({
