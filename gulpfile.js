@@ -3,7 +3,6 @@ var concatCSS = require('gulp-concat-css');
 var minifyCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var autoprefixer = require('gulp-autoprefixer');
-var server = require('gulp-server-livereload');
 
 
 gulp.task('concatcss', function(){
@@ -36,22 +35,3 @@ gulp.task('minifycss', function(){
 
       .pipe(gulp.dest('styles/css/'))
   });
-  
-  gulp.task('webserver', function() {
-    gulp.src('')
-      .pipe(server({
-        livereload: true,
-        directoryListing: false,
-        open: true  
-      }))
-  });
-//   gulp.task('concatcss', function(){
-//     return 
-//   });
-// gulp.task('js', function(){
-//   return gulp.src('client/javascript/*.js')
-//     .pipe(sourcemaps.init())
-//     .pipe(concat('app.min.js'))
-//     .pipe(sourcemaps.write())
-//     .pipe(gulp.dest('build/js'))
-// });
