@@ -1,9 +1,15 @@
 var gulp = require('gulp');
+var sass = require('gulp-sass');
 var concatCSS = require('gulp-concat-css');
 var minifyCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var autoprefixer = require('gulp-autoprefixer');
 
+gulp.task('compiletocss', function(){
+    return gulp.src('styles/scss/*.scss')
+      .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
+      .pipe(gulp.dest('styles/css/'))
+  });
 
 gulp.task('concatcss', function(){
   return gulp.src('styles/css/*.css')
@@ -35,3 +41,4 @@ gulp.task('minifycss', function(){
 
       .pipe(gulp.dest('styles/css/'))
   });
+
