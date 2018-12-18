@@ -1,5 +1,6 @@
 .header {
   display: grid;
+  grid-template-columns: -webkit-max-content auto -webkit-max-content;
   grid-template-columns: max-content auto max-content;
   border-bottom: 1px solid black;
 }
@@ -29,11 +30,16 @@
 
 .inventory {
   display: grid;
+  grid-template-columns: auto -webkit-max-content auto;
   grid-template-columns: auto max-content auto;
 }
 
 #content-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -101,6 +107,8 @@
   border-radius: 5px;
   outline: none;
   color: #9E9C9C;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
 }
 
@@ -120,6 +128,8 @@
 }
 
 .search button:hover {
+  -webkit-transition: .3s;
+  -o-transition: .3s;
   transition: .3s;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
@@ -171,6 +181,8 @@ td {
 }
 
 tr:hover td {
+  -webkit-transition: .2s;
+  -o-transition: .2s;
   transition: .2s;
   background: #004b523d;
   color: #043f44;
