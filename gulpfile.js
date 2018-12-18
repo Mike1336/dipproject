@@ -31,7 +31,7 @@ gulp.task('minifycss', function(){  //Минификация CSS-файлов
       .pipe(gulp.dest('styles/'))
   });
 
-  gulp.task('prefixcss', function(){ // добавление префиксов для разных браузеров в CSS-файлы
+  gulp.task('addprefix', function(){ // добавление префиксов для разных браузеров в CSS-файлы
     return gulp.src('styles/css/*.css')
 
       .pipe(autoprefixer({
