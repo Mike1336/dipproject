@@ -11,7 +11,15 @@
     grid-column: 3;
     align-self: center;
     padding-right: 10px;
-}
+        a{
+            text-decoration: none;
+            color: #002f33;
+            transition: .2s;
+        }
+        a:hover{
+            color: #008996;
+        }
+    }
 }
 
 #username{
@@ -26,54 +34,53 @@
 #logo{
     height: 40px;
 }
+.content{
+    
+#inventory{
+    grid-template-columns: 39% max-content auto;
+    grid-template-rows: max-content max-content; 
+}
 
-.inventory{
-display: grid;
-grid-template-columns: auto max-content auto; 
+#employee{
+    grid-template-columns: 39% max-content auto;
+    grid-template-rows: max-content max-content; 
+}
 }
 
 #content-selector {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 39% max-content auto;
+
+   .select-list {
+       grid-column: 2;
+        list-style-type: none;
+        padding: 0;
+        min-width: 350px;
+        overflow: hidden;
+        background-color: #fff;
+        border: 1px solid #7BA7AB;
+        border-radius: 10px;
+        li {
+            float: left;
+            a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+          
+        }
+        a:hover:not(.active) {
+            background-color: rgba(2, 129, 146, 0.322);
+        }
+        
+        .active {
+        background-color: #fff;
+        }
+    }
 }
 
-.select-list {
-    list-style-type: none;
-    padding: 0;
-    width: 350px;
-    overflow: hidden;
-    background-color: #fff;
-    border: 1px solid #7BA7AB;
-    border-radius: 10px;
-  
-  
-  li {
-    float: left;
-  
-    a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    }
-  
-    a:hover:not(.active) {
-    background-color: #BECDCF;
-    
-    }
-  
-    .active {
-    background-color: #fff;
-    }
-    #select-inventory{
-        background-color: #7BA7AB;
-    }
-    #select-employee{
-
-        }   
-    }
-}
 .filters{
     grid-column: 1;
     width: 190px;
@@ -90,8 +97,8 @@ grid-template-columns: auto max-content auto;
 
 .search{
     grid-column: 2;
-    margin-left: 16%;
     margin-right: auto;
+
         input{
             width: 300px;
             height: 42px;
@@ -108,7 +115,6 @@ grid-template-columns: auto max-content auto;
         button{
             position: relative;
             left: -8px;
-            width: 55px;
             height: 42px;
             border: none;
             background: #7BA7AB;
@@ -123,7 +129,7 @@ grid-template-columns: auto max-content auto;
         }
 }
 
-.inventory-table{
+.content-table{
     grid-row: 2;
     grid-column: 1/4;
     margin-top: 10px;
@@ -137,7 +143,16 @@ table {
   border-collapse: collapse;
   text-align: center;
   margin: 20px;
+  a{
+    text-decoration: none;
+    color: #004b52;
   }
+  a:hover{
+    text-decoration: underline;
+  }
+  
+}
+
     th {
     font-size: 14px;
     font-weight: normal;
@@ -168,3 +183,52 @@ table {
     background: #004b523d; 
     color: #043f44;
     }
+
+@media screen and (max-width:590px){
+        .search{
+        grid-column: 1;
+        grid-row: 1;
+        margin-right: auto;
+        margin-bottom: 10px;
+        } 
+        .content{
+
+            #inventory{
+                grid-template-columns:max-content;
+                grid-template-rows: max-content max-content; 
+            }
+            
+            #employee{
+                grid-template-columns:max-content ;
+                grid-template-rows: max-content max-content; 
+            }
+        }
+
+        .filters{
+            grid-row: 2;
+            width: 190px;
+            border: 1px solid #7BA7AB;
+            border-radius: 10px;
+        }
+        .content-table{
+            grid-row: 3;
+            margin-top: 10px;
+            margin-right: auto;
+        }
+        #content-selector {
+            display: grid;
+            grid-template-columns:max-content;
+        
+            .select-list {
+                grid-column: 1;
+                list-style-type: none;
+                padding: 0;
+                min-width: 350px;
+                overflow: hidden;
+                background-color: #fff;
+                border: 1px solid #7BA7AB;
+                border-radius: 10px;
+                }
+            }
+        
+}
