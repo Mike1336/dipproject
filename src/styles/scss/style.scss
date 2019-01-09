@@ -106,17 +106,16 @@ $table-text-color: #037b14;
 #logo{
     height: 40px;
 }
-.content{
-    
-#inventory{
-    grid-template-columns: 39% max-content auto;
-    grid-template-rows: max-content max-content; 
-}
+.content{   
+    #inventory{
+        grid-template-columns: 39% max-content auto;
+        grid-template-rows: max-content max-content;  
+    }
 
-#employee{
-    grid-template-columns: 39% max-content auto;
-    grid-template-rows: max-content max-content; 
-}
+    #employee{
+        grid-template-columns: 39% max-content auto;
+        grid-template-rows: max-content max-content;
+    }
 }
 
 #content-selector {
@@ -131,7 +130,6 @@ $table-text-color: #037b14;
         overflow: hidden;
         background-color: #fff;
         border: 1px solid $border-color;
-        border-radius: 10px;
         li {
             float: left;
             a {
@@ -143,12 +141,19 @@ $table-text-color: #037b14;
             }
           
         }
+        #select-employee{
+            padding-right: 17px;
+            padding-left: 20px;
+        }
+        #titleOfSelector{
+            padding: 14px;
+        }
         a:hover:not(.active) {
-            background-color: rgba(2, 129, 146, 0.322);
+            background-color: #a9e77285;
         }
         
         .active {
-        background-color: #fff;
+        background-color: #578530;
         }
     }
 }

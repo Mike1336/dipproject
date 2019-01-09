@@ -108,6 +108,14 @@
   grid-template-rows: max-content max-content;
 }
 
+.content .hideContent {
+  display: none;
+}
+
+.content:not(.hideContent) {
+  display: grid;
+}
+
 #content-selector {
   display: grid;
   grid-template-columns: 39% max-content auto;
@@ -121,7 +129,6 @@
   overflow: hidden;
   background-color: #fff;
   border: 1px solid #578530;
-  border-radius: 10px;
 }
 
 #content-selector .select-list li {
@@ -136,12 +143,21 @@
   text-decoration: none;
 }
 
+#content-selector .select-list #select-employee {
+  padding-right: 17px;
+  padding-left: 20px;
+}
+
+#content-selector .select-list #titleOfSelector {
+  padding: 14px;
+}
+
 #content-selector .select-list a:hover:not(.active) {
-  background-color: rgba(2, 129, 146, 0.322);
+  background-color: #a9e77285;
 }
 
 #content-selector .select-list .active {
-  background-color: #fff;
+  background-color: #578530;
 }
 
 .filters {
