@@ -51,9 +51,13 @@ preloader = document.getElementById('page-preloader');
             {
                 if(!inventorySelect.classList.contains('active')) 
                 {
+                    document.title ="Инвентарные единицы | Главная страница";
+
                     inventorySelect.classList.add('active');
                     employeeSelect.classList.remove('active');
-                    showContent("inventory"); 
+
+                    inventoryContent.classList.add('show');
+                    employeeContent.classList.remove('show');
                 }
 
             }
@@ -62,30 +66,17 @@ preloader = document.getElementById('page-preloader');
             {
                 if ( !employeeSelect.classList.contains('active') ) 
                 {
+                    document.title ="Сотрудники | Главная страница";
+
                     employeeSelect.classList.add('active');
                     inventorySelect.classList.remove('active');
-                    showContent("employee");
+
+                    employeeContent.classList.add('show');
+                    inventoryContent.classList.remove('show');
                 }
 
             }
-
             };
-            function showContent(content){ //функция показа контента
-            if(content == "inventory")
-            {
-                document.title ="Инвентарные единицы | Главная страница"
-                inventoryContent.style.display="grid"
-                employeeContent.style.display="none";
-            }
-
-            else if(content == "employee")
-            {
-                document.title ="Сотрудники | Главная страница"
-                employeeContent.style.display="grid"
-                inventoryContent.style.display="none";
-            }
-            }
-
     function setCookie(name, value, options) { //функция добавления в куки выбранного контента
         options = options || {};
         

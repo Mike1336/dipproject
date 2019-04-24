@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="SHORTCUT ICON" href="/src/images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles/css/style.min.css">
+    <link rel="SHORTCUT ICON" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/css/style.css">
 </head>
 
 <body>
@@ -13,14 +13,27 @@
     <div class="loading-container">
         <div class="spinner"></div>
         <div class="spinner-center"></div>
-        <div class="loading-text">Loading...</div>
+        <div class="loading-text">        <div class="cssload-preloader">
+          <span>L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+    
+    </div>    </div>
+</div></div>
     </div>
 </div>
 
 <header>
 <div class="header">
     <div class="logo">
-    <img id="logo" src="/src/images/logo.png" alt="Logo"/>
+    <img id="logo" src="images/logo.png" alt="Logo"/>
     </div>
 
     <div class="user">
@@ -38,7 +51,7 @@
 </div>
 <div class="content">
     <div id="inventory">
-        <div class="filters inventory">
+        <section class="filters inventory">
             <form action="" class="filter-group">
                     <ul class="filter-list">
                             <label for="all-categories"><li><input type="radio" name="filter" value="all" id="all-categories" checked="checked"/>Все категории</li></label>
@@ -51,7 +64,7 @@
                             <label for="armchairs"><li><input type="radio" name="filter" value="all" id="armchairs"/>Кресла</li></label>
                     </ul>
             </form>
-        </div>
+        </section>
 
 
         <div class="search">
@@ -105,8 +118,7 @@
 
 
     <div id="employee">
-        <div class="filters inventory">
-            <form action="" class="filter-group">
+      <section class="filters employeesection            <form action="" class="filter-group">
                     <ul class="filter-list">
                             <label for="all-depts"><li><input type="radio" name="filter" value="all" id="all-depts" checked="checked"/>Все отделы</li></label>
                             <label for="wfe"><li><input type="radio" name="filter" value="all" id="wfe"/>WEB Front-end</li></label>
@@ -117,7 +129,7 @@
                             <label for="ibe"><li><input type="radio" name="filter" value="all" id="ibe"/>iOS Back-end</li></label>
                     </ul>
             </form>               
-        </div>
+          </section>
 
         <div class="search">
                 <form>
