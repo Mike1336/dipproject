@@ -264,7 +264,8 @@ tr:hover td {
   transition: .2s;
   background: #82c45091;
 }
-.show{
+
+.show {
   display: grid !important;
 }
 
@@ -309,116 +310,39 @@ tr:hover td {
     border-radius: 10px;
   }
 }
-                                                      /* animated preloader text */
+
+/* animated preloader text */
 .cssload-preloader {
   font-family: Arial, Tahoma;
   position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
-	display: box;
-	display: -o-box;
-	display: -ms-box;
-	display: -webkit-box;
-	display: -moz-box;
-	display: flex;
-	display: -o-flex;
-	display: -ms-flex;
-	display: -webkit-flex;
-	display: -moz-flex;
-	box-pack: center;
-	-o-box-pack: center;
-	-ms-box-pack: center;
-	-webkit-box-pack: center;
-	-moz-box-pack: center;
-	justify-content: center;
-	-o-justify-content: center;
-	-ms-justify-content: center;
-	-webkit-justify-content: center;
-	-moz-justify-content: center;
-	box-align: center;
-	-o-box-align: center;
-	-ms-box-align: center;
-	-webkit-box-align: center;
-	-moz-box-align: center;
-	align-items: center;
-	-o-align-items: center;
-	-ms-align-items: center;
-	-webkit-align-items: center;
-	-moz-align-items: center;
-	transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	perspective: 487px;
-	-o-perspective: 487px;
-	-ms-perspective: 487px;
-	-webkit-perspective: 487px;
-	-moz-perspective: 487px;
-	overflow: hidden;
-	animation: wobble 3.25s ease-in-out infinite;
-	-o-animation: wobble 3.25s ease-in-out infinite;
-	-ms-animation: wobble 3.25s ease-in-out infinite;
-	-webkit-animation: wobble 3.25s ease-in-out infinite;
-	-moz-animation: wobble 3.25s ease-in-out infinite;
-	padding-bottom: 2em;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  box-pack: center;
+  justify-content: center;
+  box-align: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  perspective: 487px;
+  overflow: hidden;
+  animation: wobble 3.25s ease-in-out infinite;
+  padding-bottom: 2em;
 }
 
-
 .cssload-preloader span {
-	font-size: 39px;
-	animation: 3.25s ease-in-out infinite;
-	-o-animation: 3.25s ease-in-out infinite;
-	-ms-animation: 3.25s ease-in-out infinite;
-	-webkit-animation: 3.25s ease-in-out infinite;
-	-moz-animation: 3.25s ease-in-out infinite;
-	color: transparent;
-	text-shadow: 0 0 0px rgb(85,229,28);
+  font-size: 39px;
+  animation: 3.25s ease-in-out infinite;
+  color: transparent;
+  text-shadow: 0 0 0px #55e51c;
 }
 
 @keyframes wobble {
-	from, to {
-		transform: rotateY(-45deg);
-	}
-	50% {
-		transform: rotateY(45deg);
-	}
-}
-
-@-o-keyframes wobble {
-	from, to {
-		-o-transform: rotateY(-45deg);
-	}
-	50% {
-		-o-transform: rotateY(45deg);
-	}
-}
-
-@-ms-keyframes wobble {
-	from, to {
-		-ms-transform: rotateY(-45deg);
-	}
-	50% {
-		-ms-transform: rotateY(45deg);
-	}
-}
-
-@-webkit-keyframes wobble {
-	from, to {
-		-webkit-transform: rotateY(-45deg);
-	}
-	50% {
-		-webkit-transform: rotateY(45deg);
-	}
-}
-
-@-moz-keyframes wobble {
-	from, to {
-		-moz-transform: rotateY(-45deg);
-	}
-	50% {
-		-moz-transform: rotateY(45deg);
-	}
+  from, to {
+    transform: rotateY(-45deg);
+  }
+  50% {
+    transform: rotateY(45deg);
+  }
 }
