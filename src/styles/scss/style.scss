@@ -37,33 +37,26 @@ $table-text-color: #037b14;
     }
     
     .spinner {
-      display: inline-block;
-      width: 200px;
-      height: 200px;
-      background: url('../../images/1.png') center center;
+      height: 20em;
+      background: url("../../images/1.png") center center;
+      background-repeat: no-repeat;
       background-size: contain;
       transform-origin: 50% 50%;
       animation: spinner 3s infinite alternate ease-in-out;
     }
     .spinner-center {
-      display: inline-block;
       position: absolute;
-      margin:72px 0px 0px -131px; 
-      width: 59px;
-      height: 59px;
-      background: url('../../images/3.png') center center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 27%;
+      height: 27%;
+      background: url(   "../../images/3.png") center center;
+      background-repeat: no-repeat;
       background-size: contain;
       content: '';
     }
     
-    .loading-text {
-      position: relative;
-      z-index: 1;
-      font-size: 1.5rem;
-      font-family: "Comic Sans MS", cursive, sans-serif;
-      margin-left: 0.5em;
-    }
-
   &.done{
       opacity: 0;
       visibility: hidden;
@@ -314,9 +307,7 @@ table {
 }
                                     /* animated preloader text */
 .cssload-preloader {
-  font-family: Arial, Tahoma;
   position: absolute;
-  top: 0;
   left: 0;
   right: 0;
   z-index: 10;
@@ -326,13 +317,11 @@ table {
   box-align: center;
   align-items: center;
   transform-style: preserve-3d;
-  perspective: 487px;
-  overflow: hidden;
   animation: wobble 3.25s ease-in-out infinite;
-  padding-bottom: 2em;
 
   span {
-    font-size: 39px;
+    font-size: 3em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
     animation: 3.25s ease-in-out infinite;
     color: transparent;
     text-shadow: 0 0 0px rgb(85,229,28);

@@ -2,7 +2,7 @@
   "name": "dipproject",
   "version": "1.0.0",
   "description": "Graduation project (Inventory units)",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,11 +17,12 @@
   },
   "homepage": "https://github.com/Mike1336/dipproject#readme",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp": "^4.0.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
     "gulp-concat-css": "^3.1.0",
     "gulp-livereload": "^4.0.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-server-livereload": "^1.9.2"
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2"
   }
 }

@@ -7,7 +7,7 @@ let employeeContent = document.getElementById('employee');
 let preloader = document.getElementById('page-preloader');
 
 
-window.onload = function(){
+window.onload = () => {
   if(document.cookie=="content=inventory")
   {
   selectContent("inventory");
@@ -21,7 +21,7 @@ window.onload = function(){
       selectContent("inventory");
   }
 
-  setTimeout(function(){
+  setTimeout(() => {
       if ( !preloader.classList.contains('done') ) 
       {
           preloader.classList.add('done');
@@ -29,18 +29,15 @@ window.onload = function(){
   }, 1000);
 }       
 
-  inventorySelect.addEventListener('click', ()=>{
+  inventorySelect.addEventListener('click', () => {
     deleteCookie("content");
     selectContent("inventory");
     setCookie("content", "inventory", {
         expires: 0 //куки будут храниться до закрытия браузера
         });
   });
-  // inventorySelect.onclick = function(){
 
-  // }
-
-  employeeSelect.addEventListener('click', ()=>{
+  employeeSelect.addEventListener('click', () => {
       deleteCookie("content");
       selectContent("employee");
       setCookie("content", "employee", {

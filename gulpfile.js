@@ -4,7 +4,7 @@ let minifyCSS    = require('gulp-clean-css');
 let rename       = require("gulp-rename");
 let autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('default', () => {
+gulp.task('sass', () => {
   return gulp.src('src/styles/scss/*.scss')
  .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
  .pipe(gulp.dest('src/styles/css/'))
